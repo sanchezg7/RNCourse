@@ -1,12 +1,25 @@
+import { useState } from "react";
 import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
-import WorkingWithStyleSheets from "./WorkingWithStyleSheets";
 
 export default function LayoutsAndFlexbox() {
+    const [goal, setGoal] = useState("");
+    function handleOnGoalInputChanged(input) {
+        setGoal(input)
+    };
+
+    function handleOnAddGoal(newGoal) {
+        // setGoal(newGoal);
+        console.log(goal);
+    };
     return (
         <View style={styles.appContainer}>
             <View style={styles.inputContainer}>
-                <TextInput style={styles.textInput} placeholder="Your course goal!"/>
-                <Button title="Add goal" />
+                <TextInput
+                    style={styles.textInput}
+                    placeholder="Your course goal!"
+                    onChangeText={handleOnGoalInputChanged}
+                />
+                <Button title="Add goal" onPress={handleOnAddGoal}/>
             </View>
             <View style={styles.goalsContainer}>
                 <Text>List of goals...</Text>
