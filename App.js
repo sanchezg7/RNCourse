@@ -1,12 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native';
+import {Button, StyleSheet, Text, View} from 'react-native';
+import WorkingWithStyleSheets from "./WorkingWithStyleSheets";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View>
-        <Text style={styles.title}>text</Text>
-      </View>
-      <Text>Yo! Hello worldff!</Text>
+        <WorkingWithStyleSheets />
     </View>
   );
 }
@@ -18,4 +16,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+    dummyText: {
+        fontSize: 50,
+        margin: 16,
+        borderWidth: 2,
+        borderColor: 'blue',
+        padding: 16
+    }
 });
