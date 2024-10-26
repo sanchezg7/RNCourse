@@ -1,26 +1,15 @@
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
 import WorkingWithStyleSheets from "./WorkingWithStyleSheets";
+import LayoutsAndFlexbox from "./LayoutsAndFlexbox";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-        <WorkingWithStyleSheets />
-    </View>
+      <LayoutsAndFlexbox />
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-    dummyText: {
-        fontSize: 50,
-        margin: 16,
-        borderWidth: 2,
-        borderColor: 'blue',
-        padding: 16
-    }
+  appContainer: {
+      padding: 50
+  }
 });
